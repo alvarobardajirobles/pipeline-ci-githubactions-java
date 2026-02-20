@@ -10,7 +10,6 @@ variable "prefix" {
 
 variable "suffix" {
   type        = string
-  default = "alvarobardajirobles"
   description = "Sufijo único (por ejemplo tu usuario GitHub). Solo minúsculas y números para ACR."
 }
 
