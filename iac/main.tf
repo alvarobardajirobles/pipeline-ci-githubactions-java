@@ -1,5 +1,7 @@
 locals {
   # Acortadores para cumplir límites de Azure Container Apps (2-32 chars)
+  prefix_clean = trim(var.prefix, "-")
+
   env_short = var.environment == "production" ? "prd" : "stg"
   suf_short = substr(var.suffix, 0, 8)
 
