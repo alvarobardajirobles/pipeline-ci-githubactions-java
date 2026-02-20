@@ -9,11 +9,11 @@ locals {
   acr_name = "${var.prefix}${local.suf_short}${local.env_short}"
 
   # Nombres con guiones (mantenerlos <= 32 cuando aplique)
-  rg_name  = "${var.prefix}-${local.suf_short}-${local.env_short}-rg"
-  app_name = "${var.prefix}-${local.suf_short}-${local.env_short}-app"
-  cae_name = "${var.prefix}-${local.suf_short}-${local.env_short}-cae"
-  law_name = "${var.prefix}-${local.suf_short}-${local.env_short}-law"
-  id_name  = "${var.prefix}-${local.suf_short}-${local.env_short}-id"
+  rg_name  = "${local.prefix_clean}-${local.suf_short}-${local.env_short}-rg"
+  app_name = "${local.prefix_clean}-${local.suf_short}-${local.env_short}-app"
+  cae_name = "${local.prefix_clean}-${local.suf_short}-${local.env_short}-cae"
+  law_name = "${local.prefix_clean}-${local.suf_short}-${local.env_short}-law"
+  id_name  = "${local.prefix_clean}-${local.suf_short}-${local.env_short}-id"
 
   # Imagen pública para el primer despliegue (evita MANIFEST_UNKNOWN si aún no existe la imagen en ACR)
   bootstrap_image = "mcr.microsoft.com/azuredocs/containerapps-helloworld:latest"
